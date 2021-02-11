@@ -136,44 +136,90 @@
 // Let's put a do-while loop into a function
 // Function to log num until greater than 100
 // What differences in behavior will we see?
-function doWhileMultiplyByTwoUntilGreaterThan100(num) {
-    do {
-        num *= 2;
-        console.log("Hey, it's me do-while " + num);
-    } while (num < 100);
-}
-
-doWhileMultiplyByTwoUntilGreaterThan100(101);
-
-
-function whileMultiplyByTwoUntilGreaterThan100(num) {
-    while (num < 100) {
-        num *= 2;
-        console.log("Hey, it's me while-loop: " + num);
-    }
-}
-
-whileMultiplyByTwoUntilGreaterThan100(101);
-
-// for loops: loos that are designed to run a given number of times. Think more math thinking.
-for (var incrementer = 1; incrementer <= 10; incrementer++) {
-    console.log("This loop has run " + incrementer + " time(s).");
-}
-
-for (var i = 0;  i < 5; i++) {
-    console.log("Hello, Marco! We've said hello " + (i + 1) + " times.");
-}
-
-function sayHelloXTimes(num) {
-    for (num; num >= 0; num--) {
-        if (num % 5 === 0) {
-            console.log("Howdy! Currently num is: " + num);
-        } else {
-            console.log("Hello! Currently num is: " + num);
-        }
-    }
-}
-
-sayHelloXTimes(25);
-
 //
+// function doWhileMultiplyByTwoUntilGreaterThan100(num) {
+//     do {
+//         num *= 2;
+//         console.log("Hey, it's me do-while " + num);
+//     } while (num < 100);
+// }
+//
+// doWhileMultiplyByTwoUntilGreaterThan100(101);
+//
+//
+// function whileMultiplyByTwoUntilGreaterThan100(num) {
+//     while (num < 100) {
+//         num *= 2;
+//         console.log("Hey, it's me while-loop: " + num);
+//     }
+// }
+//
+// whileMultiplyByTwoUntilGreaterThan100(101);
+//
+// // for loops: loos that are designed to run a given number of times. Think more math thinking.
+// for (var incrementer = 1; incrementer <= 10; incrementer++) {
+//     console.log("This loop has run " + incrementer + " time(s).");
+// }
+//
+// for (var i = 0;  i < 5; i++) {
+//     console.log("Hello, Marco! We've said hello " + (i + 1) + " times.");
+// }
+//
+// function sayHelloXTimes(num) {
+//     for (num; num >= 0; num--) {
+//         if (num % 5 === 0) {
+//             console.log("Howdy! Currently num is: " + num);
+//         } else {
+//             console.log("Hello! Currently num is: " + num);
+//         }
+//     }
+// }
+//
+// sayHelloXTimes(25);
+//
+// // break
+//
+// var x = 0;
+//
+// while (true) {
+//     alert("This is the song that never ends. It just goes on and on my friends. Somebody started singing not knowing what it was, and now we'll all just keep on singing this");
+//     x++;
+//     if (x === 5) {
+//         alert("LambChop, cut it out!");
+//         break;
+//     }
+//     alert("Again! This is the " + x + " time");
+// }
+
+// continue
+// for (var i = 0; i < 100; i++) {
+//     if (i % 2 !== 0) {
+//         continue;
+//     }
+//     console.log(i);
+// }
+//
+// for (var i = 100; i > 0; i--) {
+//     if (i % 2 !== 0) {
+//         continue;
+//     }
+//     console.log(i);
+// }
+
+// Close our lecture: let's do a code buzz
+// Whenever a number is divisible by 6: print Codeup
+// Whenever a number is divisible by 2: print Code
+// Whenever a number is divisible by 3: print Up
+for  (var i = 1; i < 50; i++) {
+    if (i % 6 === 0) {
+        console.log("Codeup");
+    } else if (i % 2 === 0) {
+        console.log("Code");
+    } else if (i % 3 === 0) {
+        console.log("Up");
+    } else if (i === 25) {
+        continue;
+    } else {
+        console.log(i);
+    }
+}
