@@ -154,3 +154,26 @@ function whileMultiplyByTwoUntilGreaterThan100(num) {
 }
 
 whileMultiplyByTwoUntilGreaterThan100(101);
+
+// for loops: loos that are designed to run a given number of times. Think more math thinking.
+for (var incrementer = 1; incrementer <= 10; incrementer++) {
+    console.log("This loop has run " + incrementer + " time(s).");
+}
+
+for (var i = 0;  i < 5; i++) {
+    console.log("Hello, Marco! We've said hello " + (i + 1) + " times.");
+}
+
+function sayHelloXTimes(num) {
+    for (num; num >= 0; num--) {
+        if (num % 5 === 0) {
+            console.log("Howdy! Currently num is: " + num);
+        } else {
+            console.log("Hello! Currently num is: " + num);
+        }
+    }
+}
+
+sayHelloXTimes(25);
+
+//
