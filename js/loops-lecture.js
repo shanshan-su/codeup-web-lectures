@@ -7,13 +7,20 @@
 // if (areWeThereYet) {
 //     // do some stuff?
 // }
-
+//
 // var areWeThereYet;
 //
 // while (!areWeThereYet) { // is it TRUE we are there yet?
 //     areWeThereYet = confirm("Are we there yet?");
 // }
-
+//
+// var onTheRoad = true;
+// while(onTheRoad) { // is it true we are there yet?
+//     onTheRoad =  confirm("Are we still travelling?")
+// }
+//
+// alert("We're here!")
+//
 // var haveToy = confirm("Can I have the toy please?");
 //
 // while (!haveToy) {
@@ -102,11 +109,48 @@
 // do {
 //     // code my  do-while loop will run at least once
 // } while (condition to check to proceed);
+//
+// while (false) {
+//     console.log("Will you ever see me?")
+// }
+//
+// var count = 0;
+// do {
+//     console.log("Will you ever see me in the world of the so-while loop " + count + " times.")
+//     count ++;
+// } while (false);
+//
+//
+// // function
+// var secret;
+//
+// while (secret !== "sesame") {
+//     alert("Currently, secret is : " + secret);
+//     secret = prompt("'To proceed, you must tell me the secret password...'");
+// }
+//
+// if(secret === "sesame") {
+//     alert("Yay, you whispered the correct secret");
+// }
 
-while (false) {
-    console.log("Will you ever see me?")
+// Let's put a do-while loop into a function
+// Function to log num until greater than 100
+// What differences in behavior will we see?
+function doWhileMultiplyByTwoUntilGreaterThan100(num) {
+    do {
+        num *= 2;
+        console.log("Hey, it's me do-while " + num);
+    } while (num < 100);
 }
 
-do {
-    console.log("Will you ever see me in the world of the so-while loop?")
-} while (false);
+doWhileMultiplyByTwoUntilGreaterThan100(101);
+
+
+function whileMultiplyByTwoUntilGreaterThan100(num) {
+    while (num < 100) {
+        num *= 2;
+        console.log("Hey, it's me while-loop: " + num);
+    }
+}
+
+whileMultiplyByTwoUntilGreaterThan100(101);
