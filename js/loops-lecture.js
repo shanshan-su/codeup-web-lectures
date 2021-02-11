@@ -4,8 +4,6 @@
 
 // Are we there yet?
 
-var onTheRoad = true;
-
 // if (areWeThereYet) {
 //     // do some stuff?
 // }
@@ -46,22 +44,22 @@ var onTheRoad = true;
 // }
 //
 // alert("Excellent - let's all go outside!")
-
-// Help me create a WHILE loop that runs while X < 10
-var x = 0;
-while ( x < 10) {
-    x++;
-    console.log(x);
-}
-
-x = 10;
-while ( x > 0) {
-    // x--; // x results in 9
-    console.log(--x); //post-decrement? Gonna see 10 first
-}
-
-console.log("Hello, I'm down here! " + x); // results of above
-
+//
+// // Help me create a WHILE loop that runs while X < 10
+// var x = 0;
+// while ( x < 10) {
+//     x++;
+//     console.log(x);
+// }
+//
+// x = 10;
+// while ( x > 0) {
+//     // x--; // x results in 9
+//     console.log(--x); //post-decrement? Gonna see 10 first
+// }
+//
+// console.log("Hello, I'm down here! " + x); // results of above
+//
 // // Let's take our work and put into a FUNCTION definition
 // function decrementFromTen(){
 //     x = 10;
@@ -82,19 +80,33 @@ console.log("Hello, I'm down here! " + x); // results of above
 //     }
 //     return console.log("Wrapped up counting!");
 // }
+//
+//
+// // Now: Let's go one layer deeper - can you tell me how many times my loop has run?
+// function incrementUntilTen(num) {
+//     var counter = 0;
+//     while (num < 10) {
+//         num += 1;
+//         console.log(num);
+//         counter = counter + 1;
+//     }
+//     return console.log("Wrapped up counting! The loop ran " + counter + " times.");
+// }
+//
+// incrementUntilTen(0);
 
 
-// Now: Let's go one layer deeper - can you tell me how many times my loop has run?
-function incrementUntilTen(num) {
-    var counter = 0;
-    while (num < 10) {
-        num += 1;
-        console.log(num);
-        counter = counter + 1;
-    }
-    return console.log("Wrapped up counting! The loop ran " + counter + " times.");
+
+// do while loop
+
+// do {
+//     // code my  do-while loop will run at least once
+// } while (condition to check to proceed);
+
+while (false) {
+    console.log("Will you ever see me?")
 }
 
-incrementUntilTen(0);
-
-
+do {
+    console.log("Will you ever see me in the world of the so-while loop?")
+} while (false);
