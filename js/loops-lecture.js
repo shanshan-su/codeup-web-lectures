@@ -60,3 +60,41 @@ while ( x > 0) {
     console.log(--x); //post-decrement? Gonna see 10 first
 }
 
+console.log("Hello, I'm down here! " + x); // results of above
+
+// // Let's take our work and put into a FUNCTION definition
+// function decrementFromTen(){
+//     x = 10;
+//     while ( x > 0) {
+//         console.log(x--);
+//     }
+//     return console.log("Hey, I finished counting!");
+// }
+//
+// decrementFromTen();
+//
+// // How about a function where the user gives us a num
+// // then from the num we increment until ten??
+// function incrementUntilTen(num) {
+//     while (num < 10) {
+//         num += 1;
+//         console.log(num);
+//     }
+//     return console.log("Wrapped up counting!");
+// }
+
+
+// Now: Let's go one layer deeper - can you tell me how many times my loop has run?
+function incrementUntilTen(num) {
+    var counter = 0;
+    while (num < 10) {
+        num += 1;
+        console.log(num);
+        counter = counter + 1;
+    }
+    return console.log("Wrapped up counting! The loop ran " + counter + " times.");
+}
+
+incrementUntilTen(0);
+
+
