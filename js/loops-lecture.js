@@ -223,3 +223,30 @@ for  (var i = 1; i < 50; i++) {
         console.log(i);
     }
 }
+
+
+// Nested for loop
+// ***
+// ***
+// ***
+// ***
+for (var x = 1; x <= 4; x++) {
+    var output = "";
+    for (var y = 1; y <= 3; y++) {
+        output = output + "*";
+    }
+    console.log(output);
+}
+
+// Nested for loop
+function pyramid() {
+    for (var i = 1; i <= 4; i++) {
+        var print = "";
+        for (var j = 1; j <= i; i++) {
+            print = print + i;
+        }
+        console.log(print);
+    }
+}
+
+pyramid();
