@@ -239,14 +239,56 @@ for (var x = 1; x <= 4; x++) {
 }
 
 // Nested for loop
-function pyramid() {
-    for (var i = 1; i <= 4; i++) {
-        var print = "";
-        for (var j = 1; j <= i; i++) {
-            print = print + i;
-        }
-        console.log(print);
+for (i = 1; i <= 4; i++) {
+    var print = "";
+    for (var j = 1; j <= i; j++) {
+        print = print + "*";
+    }
+    console.log(print);
+}
+
+
+/*
+1 x 3 = 3
+2 x 3 = 6
+3 x 3 = 9
+4 x 3 = 12
+ */
+
+var number = 3;
+for (i = 1; i <= 4; i++) {
+    console.log(i + "x" + number + "=" + (i * number));
+}
+
+number = 12;
+for (i = 1; i <= 12; i++) {
+    for (j = 1; j <= i; j++) {
+        console.log(j + "x" + number + "=" + (j * number));
     }
 }
 
-pyramid();
+/*
+Exercise 1:
+Set 1
+Set 2
+Set 3
+Exercise 2:
+Set 1
+Set 2
+Set 3
+Exercise 3:
+Set 1
+Set 2
+Set 3
+Exercise 4:
+Set 1
+Set 2
+Set 3
+ */
+
+for(i = 1; i <= 4; i++) {
+    console.log("Exercise " + i + ":")
+    for (j = 1; j<= 3; j++) {
+        console.log("Set " + j);
+    }
+}
