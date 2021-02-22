@@ -52,7 +52,7 @@ var daysOfTheWeek = ["monday", "tuesday", "wednesday", "thursday", "friday", "sa
 console.log(daysOfTheWeek);
 
 // TODO: create an array of favorite foods and set to a variable called `favoriteFoods` - then console.log the variable
-var favoriteFoods = ["shrimp", "pizza", "lasagne", "hamburgers", "tacos", "BBQ", "crabs"];
+var favoriteFoods = ["shrimp", "pizza", "lasagna", "hamburgers", "tacos", "BBQ", "crabs"];
 console.log(favoriteFoods);
 
 /* ***************************************************************
@@ -63,22 +63,22 @@ console.log(favoriteFoods);
 
 // TODO TOGETHER: Log the length of shapes array
 
-// console.log("The length of shapes is: " + );
+console.log("The length of shapes is: " + shapes.length);
 
 
 // TODO: console.log the length of the instructors array
 
-// console.log("The length of instructors array is: " + );
+console.log("The length of instructors array is: " + instructors.length);
 
 
 // TODO: console.log the length of the daysOfTheWeek array
 
-// console.log("The length of days of week array is: " + );
+console.log("The length of days of week array is: " + daysOfTheWeek.length);
 
 
 // TODO: console.log the length of the favoriteFoods array
 
-// console.log("The length of favorite foods array is: " + );
+console.log("The length of favorite foods array is: " + favoriteFoods.length);
 
 
 /* ***************************************************************
@@ -89,25 +89,42 @@ console.log(favoriteFoods);
 
 // TODO TOGETHER: What do we expect the following to output?
 
-// 	console.log(shapes[0]); //
-// 	console.log(shapes[1]); //
-// 	console.log(shapes[2]); //
-// 	console.log(shapes[3]); //
-// 	console.log(shapes[4]); //
+	console.log(shapes[0]); // "square"
+	console.log(shapes[1]); // "rectangle"
+	console.log(shapes[2]); // "circle"
+	console.log(shapes[3]); // "triangle"
+	console.log(shapes[4]); // undefined
 
 
 
 // TODO: console.log each element of the instructors array
 
+    console.log(instructors[0]);
+    console.log(instructors[1]);
+    console.log(instructors[2]);
+    console.log(instructors[3]);
+    console.log(instructors[4]);
 
 
 // TODO: console.log the first three elements of the daysOfTheWeek array
 
-
+    console.log(daysOfTheWeek[0]);
+    console.log(daysOfTheWeek[1]);
+    console.log(daysOfTheWeek[2]);
+    console.log(daysOfTheWeek[3]);
+    console.log(daysOfTheWeek[4]);
+    console.log(daysOfTheWeek[5]);
+    console.log(daysOfTheWeek[6]);
 
 // TODO: console.log the first three elements of the favoriteFoods array
 
-
+    console.log(favoriteFoods[0]);
+    console.log(favoriteFoods[1]);
+    console.log(favoriteFoods[2]);
+    console.log(favoriteFoods[3]);
+    console.log(favoriteFoods[4]);
+    console.log(favoriteFoods[5]);
+    console.log(favoriteFoods[6]);
 
 // TODO: create a function called `returnLastElement` that accepts an array and returns the last element of that array
 
@@ -119,9 +136,12 @@ console.log(favoriteFoods);
 //3. get the last item in the array by using array.length - 1
 //4. return the last item
 
+function returnLastElement(array) {
+    return array[array.length - 1];
+}
 
-// console.log(returnLastElement(instructors)); //fernando
-// console.log(returnLastElement(daysOfTheWeek)); //sunday
+console.log(returnLastElement(instructors)); //fernando
+console.log(returnLastElement(daysOfTheWeek)); //sunday
 
 
 
