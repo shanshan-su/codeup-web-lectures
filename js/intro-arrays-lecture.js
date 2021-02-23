@@ -193,15 +193,21 @@ for( i = 0; i < instructors.length; i++) {
 *************************************************************** */
 
 // TODO TOGETHER: Using a for each loop, console.log each shape from the shapes array
-
+shapes.forEach(function(element, index) {
+    console.log("The shape at index" + index + " is " + element);
+})
 
 
 // TODO TOGETHER: Using a for each loop, console.log each element from the following array: var pies = ["apple", "cherry", "key lime", "huckleberry"];
-
+pies.forEach(function(element, index) {
+    console.log("The pie at index " + index + " is " + element);
+})
 
 
 // TODO: Using a for each loop, iterate through the instructors array and console.log each instructor
-
+instructors.forEach(function(element) {
+    console.log(element);
+})
 
 
 // TODO: Using a for each loop, iterate through the daysOfTheWeek array and console.log each day of the week
