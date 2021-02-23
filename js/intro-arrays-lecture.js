@@ -146,12 +146,13 @@ console.log(returnLastElement(daysOfTheWeek)); //sunday
 *************************************************************** */
 //  TODO TOGETHER: Log each element of the shapes array
 // TODO TOGETHER: Using a for loop, iterate through the shapes array and log each shape
-
-
-
-
 // TODO TOGETHER: Alert "that's my favorite shape!" when your favorite shape is iterated over in the loop.
-
+for (var i = 0; i < shapes.length; i++) {
+    console.log("The shape at index " + i + " is " + shapes[i]);
+    if (shapes[i] === "circle") {
+        alert("That's my favorite shape!");
+    }
+}
 
 
 // TODO: What happens if we change var i = 1? or var i = 2;
@@ -160,17 +161,31 @@ console.log(returnLastElement(daysOfTheWeek)); //sunday
 
 
 // TODO: Using a for loop, iterate through the instructors array and console.log each instructor
-
+for (i = 0; i < instructors.length; i++) {
+    console.log("The instructor at index " + i + " is " + instructors[i]);
+}
 
 // TODO: Using a for loop, iterate through the daysOfTheWeek array and console.log each day of the week
-
+for (i = 0; i < daysOfTheWeek.length; i++) {
+    console.log(daysOfTheWeek[i]);
+}
 
 // TODO: Using a for loop, iterate through the favoriteFoods array and console.log each favorite food
-
+for(i = 0; i < favoriteFoods.length; i++) {
+    console.log(favoriteFoods[i]);
+}
 
 
 // TODO: Refactoring the instructor loop, alert "hey, I know <INSTRUCTOR NAME HERE>" if you have had class with that instructor. If you have not had class with that instructor, alert "I haven't had class with <INSTRUCTOR NAME HERE> yet!"
-
+var instructorsIKnow = ["douglas", "kenneth", "samuel"];
+for( i = 0; i < instructors.length; i++) {
+    // if (instructorsIKnow.includes(instructors[i])) {
+    //     alert("Hey, I know " + instructors[i] + "!");
+    // } else {
+    //     alert("I haven't had class with " + instructors[i] + " yet!");
+    // }
+    (instructorsIKnow.includes(instructors[i])) ? alert("Hey, I know " + instructors[i] + "!") : alert("I haven't had class with " + instructors[i] + " yet!");
+}
 
 
 /* ***************************************************************
@@ -190,7 +205,12 @@ console.log(returnLastElement(daysOfTheWeek)); //sunday
 
 
 // TODO: Using a for each loop, iterate through the daysOfTheWeek array and console.log each day of the week
-
+daysOfTheWeek.forEach(function(element, index) {
+    console.log("The day at index " + index + " is " + element);
+})
 
 
 // TODO: Using a for each loop, iterate through the favoriteFoods array and console.log each favorite food
+favoriteFoods.forEach(function(element, index) {
+    console.log("The favorite food at index " + index + " is " + element);
+})
