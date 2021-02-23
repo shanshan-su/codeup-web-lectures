@@ -111,20 +111,14 @@ console.log("The length of favorite foods array is: " + favoriteFoods.length);
     console.log(daysOfTheWeek[0]);
     console.log(daysOfTheWeek[1]);
     console.log(daysOfTheWeek[2]);
-    console.log(daysOfTheWeek[3]);
-    console.log(daysOfTheWeek[4]);
-    console.log(daysOfTheWeek[5]);
-    console.log(daysOfTheWeek[6]);
+
 
 // TODO: console.log the first three elements of the favoriteFoods array
 
     console.log(favoriteFoods[0]);
     console.log(favoriteFoods[1]);
     console.log(favoriteFoods[2]);
-    console.log(favoriteFoods[3]);
-    console.log(favoriteFoods[4]);
-    console.log(favoriteFoods[5]);
-    console.log(favoriteFoods[6]);
+
 
 // TODO: create a function called `returnLastElement` that accepts an array and returns the last element of that array
 
