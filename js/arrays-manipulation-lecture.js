@@ -205,21 +205,16 @@ function cleanPhoneNumbers(phoneNums) {
     var phoneNumbersArray = phoneNums.split("\n");
     phoneNumbersArray.forEach(function(phoneNum) {
         output.push(phoneNum.split("-").join(""));
-    })
+    });
     return output;
 }
+
 
 var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
 
 for (var i = 0; i < cleanNumsArr.length; i ++) {
     console.log(cleanNumsArr[i]);
 }
-
-
-
-
-
-
 
 
 
@@ -236,22 +231,22 @@ for (var i = 0; i < cleanNumsArr.length; i ++) {
     param3 = from this parameter and onward, arguments passed in will be added as new elements at the end of the array
  */
 
-//
-// // create new test array
-//     var bonds = ["Craig", "Brosnan", "Dalton", "Moore", "Connery"];
-//
-//
-// // removing elements splice
-//     var missingBonds = bonds.splice(bonds.indexOf("Moore"), 2);
-//     console.log(bonds);
-//     console.log(missingBonds);
-//
-//
-// // adding elements with splice
-//     bonds.splice(1, 0, "Lazenby");
-//     console.log(bonds);
-//
-//
-// // replace elements
-//     bonds.splice(bonds.indexOf("Craig"), 1, "Elba");
-//     console.log(bonds);
+
+// create new test array
+    var bonds = ["Craig", "Brosnan", "Dalton", "Moore", "Connery"];
+
+
+// removing elements splice
+    var missingBonds = bonds.splice(bonds.indexOf("Moore"), 2);
+    console.log(bonds);
+    console.log(missingBonds);
+
+
+// adding elements with splice
+    bonds.splice(1, 0, "Lazenby");
+    console.log(bonds);
+
+
+// replace elements
+    bonds.splice(bonds.indexOf("Craig"), 1, "Elba");
+    console.log(bonds);
