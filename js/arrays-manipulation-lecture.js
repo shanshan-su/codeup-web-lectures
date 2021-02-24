@@ -147,13 +147,15 @@ console.log(pies.reverse());
 
 // sort an array in alphabetical order
 
-    // pies.sort();
+    console.log(pies.sort());
 
 // sort in chronological order
 
-    // var numbers = [1, 2, 11, 3, 4];
-    // numbers.sort();
-    // console.log(numbers); // wat?
+    var numbers = [1, 2, 11, 3, 4];
+    numbers.sort(function(a, b) {
+        return a - b;
+    })
+    console.log(numbers); // [1, 2, 3, 4, 11]
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
@@ -162,13 +164,13 @@ console.log(pies.reverse());
 
 // splitting string into and array
 
-// var names = "Bob Sally Mary";
-//
-// var namesArr = names.split(" ");
-//
-// var namesString = namesArr.join("");
-//
-// console.log(namesString);
+var names = "Bob Sally Mary";
+
+var namesArr = names.split(" ");
+
+var namesString = namesArr.join("");
+
+console.log(namesString);
 
 // splitting on an empty string
 
@@ -192,17 +194,20 @@ console.log(pies.reverse());
        5125553030
 */
 
-// var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
-//
-// function cleanPhoneNumbers(phoneNums) {
-//
-// }
-//
-// var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
-//
-// for (var i = 0; i < cleanNumsArr.length; i += 1) {
-//     console.log(cleanNumsArr[i]);
-// }
+var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
+
+function cleanPhoneNumbers(phoneNums) {
+    return phoneNums.split("\n");
+}
+
+var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
+
+for (var i = 0; i < cleanNumsArr.length; i ++) {
+    for (var j = 0; j < cleanNumsArr[i].length; j++) {
+        cleanNumsArr[i] = cleanNumsArr[i].replace("-", "");
+    }
+    console.log(cleanNumsArr[i]);
+}
 
 
 
