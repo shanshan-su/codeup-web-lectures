@@ -168,19 +168,23 @@ var names = "Bob Sally Mary";
 
 var namesArr = names.split(" ");
 
+console.log(namesArr);
+
 var namesString = namesArr.join("");
 
 console.log(namesString);
 
 // splitting on an empty string
 
-    // var everyCharacter = bondsString.split("");
+    var everyCharacter = namesString.split("");
+    console.log(everyCharacter);
+    console.log(everyCharacter.reverse().join(""));
 
 // joining array into a string
 
-    // var bondsArray = ["Connery", "Lazenby", "Moore", "Dalton", "Brosnan", "Craig"];
-    // var bondsString = bondsArray.join("_");
-
+    var bondsArray = ["Connery", "Lazenby", "Moore", "Dalton", "Brosnan", "Craig"];
+    var bondsString = bondsArray.join("_");
+    console.log(bondsString);
 
 // TODO DEMONSTRATION: Create a function that will take in a formatted string of numbers
 //  and return an array of phone numbers without any symbols. Log the output of the returned array.
@@ -197,15 +201,17 @@ console.log(namesString);
 var phoneNumbers = '210-555-2020\n230-555-2020\n512-555-3030';
 
 function cleanPhoneNumbers(phoneNums) {
-    return phoneNums.split("\n");
+    var output = [];
+    var phoneNumbersArray = phoneNums.split("\n");
+    phoneNumbersArray.forEach(function(phoneNum) {
+        output.push(phoneNum.split("-").join(""));
+    })
+    return output;
 }
 
 var cleanNumsArr = cleanPhoneNumbers(phoneNumbers);
 
 for (var i = 0; i < cleanNumsArr.length; i ++) {
-    for (var j = 0; j < cleanNumsArr[i].length; j++) {
-        cleanNumsArr[i] = cleanNumsArr[i].replace("-", "");
-    }
     console.log(cleanNumsArr[i]);
 }
 
