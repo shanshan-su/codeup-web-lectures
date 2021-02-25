@@ -107,13 +107,13 @@ console.log(myCar);
 //We can use dot notation or array notation in similar ways to start accessing these properties
 //Let's share some information about our cars :)
 
-// console.log("Hey, y'all! I own a " + myCar["make"] + " " + myCar.model) //Should concat from these two properties into this structure like we've been used to doing with variables
+console.log("Hey, y'all! I own a " + myCar["make"] + " " + myCar.model); //Should concat from these two properties into this structure like we've been used to doing with variables
 
 //Speaking of variables, we can tap into our prior understanding of assigning variables thus far and assign a property to a variable:
 
-// var myCarYear = myCar.year;
+var myCarYear = myCar.year;
 
-// console.log("Woops - forgot to tell you what year my vehicle is, it's model year " + myCarYear)
+console.log("Woops - forgot to tell you what year my vehicle is, it's model year " + myCarYear)
 
 //What if we wanted to create a more complicated piece of data? Perhaps a list of our cars FEATURES?
 
@@ -124,9 +124,15 @@ console.log(myCar);
 // for (let i = 0; i < myCar.features.length; i++){
 //     console.log("Here's one of my car's features: " + myCar.features[i])
 // }
+// myCar.features.forEach(function(element) {
+//     console.log("Here's one of my car's features: " + element);
+// });
 
 // TODO: Add an array of features that your vehicle has!
-
+myCar.features = ["Automatic Windows", "Bluetooth Connectivity", "Remote Start"];
+myCar.features.forEach(function(element) {
+    console.log("Here's one of my car's features: " + element);
+});
 //What about who owns our car? That could be an object itself if we think it through - the owner has a firstName and a lastName at the very least, right?
 //Let's try nesting this object inside of our car object we've been building out
 
