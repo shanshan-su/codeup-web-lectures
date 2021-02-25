@@ -44,14 +44,8 @@ console.log(myObject2);
 
 //* TODO: Create a new Object and call it 'myCar' using either way to do so shown above (object instance or object literal)
 
-var myCar = {
-    make: "Nissan",
-    model: "Altima",
-    year: 2017,
-    color: "silver"
-}
+var myCar = {}
 
-console.log(myCar);
 
 // That's great! But our car object doesn't have much going on, does it? There's no depth or meat to it - how can we fill our object in?
 
@@ -67,27 +61,36 @@ console.log(myCar);
 
 // We can use dot notation to do so:
 
-// myCar.make = "Chevrolet";
+myCar.make = "Chevrolet";
+
+console.log(myCar);
 
 // Or array notation:
 
-// myCar["model"] = "Silverado";
+myCar["model"] = "Silverado";
+
+console.log(myCar);
 
 //In general, dot notation is preferred of the two notations
 
 //We can also set up our objects and properties during object creation
-// var sigotherCar = {
-//     make: "Honda",
-//     model: "Fit",
-//     year: 2010
-// }
+var sigOtherCar = {
+    make: "Honda",
+    model: "Fit",
+    year: 2010
+}
 
+console.log(sigOtherCar);
 
 // TODO: Fill in your myCar object with properties of make, model, and year with the correct values. If you don't own a vehicle, fill in the details with your favorite vehicle.
 
 //For me? I'm missing the year for myCar so. .
 
-// myCar.year = 2017;
+myCar.make = "Nissan";
+myCar.model = "Altima";
+myCar.year = 2017;
+
+console.log(myCar);
 
 //Now I have a completed example of the myCar object - the model and make were added above in prior examples
 
