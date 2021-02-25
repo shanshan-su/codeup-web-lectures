@@ -142,13 +142,19 @@ myCar.features.forEach(function(element) {
 
 // TODO: Nest a 'carOwner' object of your own into this growing myCar object and console.log the results!
 
+var carOwner = {firstName: "Shanshan", lastName: "Su"};
+myCar.owner = carOwner;
 // console.log(myCar);
 
 //An object can also contain within itself a method (function). We can set it up similarly to our properties, but with a value that is the function expression
 
-// myCar.turnOn = function () {
-//     alert("Putting the key in the ignition - fired up the " + myCar.make + " " + myCar.model + " just fine!")
-// }
+var turnItOn = function () {
+    alert("Putting the key in the ignition - fired up the " + this.make + " " + this.model + " just fine!")
+}
+
+myCar.turnOn = turnItOn;
+
+console.log(myCar);
 
 /*
 * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -158,7 +164,7 @@ myCar.features.forEach(function(element) {
 
 //Let's tie some things together: Let's make a garage with another car!
 
-// sigotherCar = {
+// sigOtherCar = {
 //     make: "Honda",
 //     model: "Fit",
 //     year: 2010,
@@ -170,12 +176,12 @@ myCar.features.forEach(function(element) {
 //         alert("Putting the key in the ignition - fired up the " + this.make + " " + this.model + " just fine!")
 //     }
 // }
-
+//
 // var theGarage = [
 //     myCar,
-//     sigotherCar
+//     sigOtherCar
 // ]
-
+//
 // console.log(theGarage);
 
 //Now: loop through an ARRAY of OBJECTS, accessing our turnOn function for our vehicles
@@ -188,3 +194,19 @@ myCar.features.forEach(function(element) {
 
 //One final TODO: A bigger task - set up your own garage and add at least another vehicle into it. Log your garage array to verify it contains the cars you want - once your garage has the right cars, write a loop to access some properties or a method from them!
 
+var hisCar = {
+    make: "Mazda",
+    model: "Mazda 6",
+    year: 2009,
+    features: ["Automatic Windows", "Manual"],
+    owner: {firstName: "J.", lastName: "W."},
+    turnOn: turnItOn
+}
+
+var myGarage = [myCar, hisCar];
+
+console.log(myGarage);
+
+myGarage.forEach(function(car) {
+    car.turnOn();
+})
