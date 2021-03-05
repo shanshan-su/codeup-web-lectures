@@ -1,0 +1,192 @@
+/* ************************* SELECTORS ************************ */
+
+/*--------------------- BASIC SELECTORS */
+
+/*
+    selector {
+        property: value;
+    }
+ */
+
+
+/*
+
+    element {
+        property: value;
+    }
+
+ */
+
+body {
+    background-color: antiquewhite;
+}
+
+
+/*
+
+    #id { AVOID THIS
+        property: value;
+    }
+
+ */
+
+#comic {
+    font-family: "Comic Sans MS";
+}
+
+/*
+
+    .class {
+        property: value;
+    }
+
+ */
+
+.comic {
+    font-family: "Comic Sans MS";
+}
+
+
+/* ------------ MULTIPLE SELECTORS */
+
+/*
+
+    selector, selector {
+        property: value;
+    }
+
+ */
+
+p, h1 {
+    font-family: "Comic Sans MS";
+    background-color: lightcyan;
+}
+
+.comic {
+    background-color: lightgrey;   /* overwrite */
+}
+
+
+/* ---------------COMBINING SELECTORS */
+
+/*
+
+    someSelector {
+        property: value;
+    }
+    anotherSelector {
+        property: value;
+    }
+
+ */
+
+.class1 {
+    color: cornflowerblue;
+}
+.class2 {
+    background-color: lavender;
+}
+.class3 {
+    background-color: azure;
+}
+
+
+/* ------------------- Descendent Selector */
+
+/*
+
+    selectorParent selectorChild {
+        property: value;
+    }
+
+ */
+
+main p {
+    background-color: aquamarine;
+}
+
+nav a {
+    background-color: gainsboro;
+}
+
+/* --------------- DIRECT CHILD SELECOR */
+
+/*
+
+    selectorParent>directChild {
+        property: value;
+    }
+
+*/
+
+main>p {
+    font-size: 20px;
+}
+
+section>p {
+    font-size: 15px;
+}
+
+.special>p {
+    font-size: 25px;
+}
+
+
+/* -------------- COMBINING SELECTORS */
+
+/*
+
+    element.aClassName {
+        property: value;
+    }
+
+    element#IDName {
+        property: value;
+    }
+
+ */
+
+p.comic {
+    font-family: "Comic Sans MS";
+}
+
+h3#comic {
+    font-size: 20px;
+}
+
+
+/* ---------------- PSEUDO CLASSES */
+
+/*
+
+    selector:pseudo-class {
+        property1: value;
+        property2: value;
+    }
+
+ */
+
+/* unvisited link (:link) */
+a:link {
+    color:red;
+    font-size:20px;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
+}
+
+li:hover {
+    background-color: cornflowerblue;
+}
