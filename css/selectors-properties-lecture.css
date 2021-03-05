@@ -17,10 +17,48 @@
 
  */
 
+
+/* background images */
+
 body {
-    background-color: antiquewhite;
+    color: rebeccapurple;
+    background-image: url("https://ktar.com/wp-content/uploads/2019/05/grumpy-cat-getty.jpg");
+    background-repeat: no-repeat;    /* default with repeat to right and below */
+    /*background-size: contain;*/    /* to adjust size to fill the width of the page */
+    background-size: cover;    /* to adjust size to fit the whole page */
+    /*background-color: antiquewhite;*/
+    background-color: rgba(0, 0, 255, 0.15);      /* a in rgba means opacity */
+    /*background: linear-gradient(to right, #32a852, #32a2a8);*/
+
+    font-family: "Apple Chancery", ".AppleSystemUIFontMonospaced", sans-serif;
 }
 
+
+/* text-decoration */
+
+h1 {
+    /* override the color */
+    color: blue;
+    /*text-decoration: underline;*/
+    /*text-decoration: line-through;*/
+    text-decoration: overline;
+    /* Yes you can use all of them at once! */
+    /*text-decoration: underline line-through overline;*/
+    /*text-align: left;*/
+    text-align: center;
+    /*text-align: right;*/
+    /*font-style: italic;*/
+    font-style: oblique;
+    /*font-size: 45px;*/
+    font-size: 2em;     /* em and rem are more commonly used in the field. affecting line height */
+}
+
+/* ^^^^^^^^^^^^^^^^^ =======================================================
+    font-family HUGE TOPIC!!!
+    web safe fonts vs. web fonts
+    general font categories: serif, sans-sarif, monspaced
+    the font-family property normally is set to a list of example font stacks - https:www.cssfontstack.com/
+ */
 
 /*
 
@@ -44,8 +82,18 @@ body {
 
 .comic {
     font-family: "Comic Sans MS";
+    font-weight: bold;
 }
 
+/* list-style */
+
+ol {
+    list-style: upper-alpha;
+}
+
+ul {
+    list-style: circle;
+}
 
 /* ------------ MULTIPLE SELECTORS */
 
@@ -58,7 +106,7 @@ body {
  */
 
 p, h1 {
-    font-family: "Comic Sans MS";
+    /*font-family: "Comic Sans MS";*/
     background-color: lightcyan;
 }
 
