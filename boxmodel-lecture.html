@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Box Model Lecture</title>
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        #box-1 {
+            background: antiquewhite;
+            width: 400px;
+            height: 300px;
+
+            /* TODO: Add padding & margin. Experiment with different syntax.
+          */
+            padding: 10px;  /* 10px all sides */
+            /*padding: 10px 5px;  !* 10px on top/bottom, 5px on left/right *!*/
+            /*padding: 10px 5px 15px 20px;  !* top right bottom left *!*/
+            border: 10px solid brown;
+            margin: 10px;
+        }
+
+        /* TODO: Calculate total width and height */
+
+        #box-2 {
+            /*display: none;*/
+            background: azure;
+            width: 400px;
+            height: 300px;
+            padding: 10px;
+            border: 10px solid cornflowerblue;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Box Model</h1>
+
+<div id="box-1">
+    <p>
+        Box1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit quasi velit veniam.
+        Asperiores blanditiis cumque, dicta distinctio doloribus, ex facilis illum mollitia pariatur quae,
+        quia vero voluptate. Aut, esse!
+    </p>
+</div>
+
+
+<div id="box-2">
+    <p>
+        Box2: Border Box Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum fugit quasi velit veniam.
+        Asperiores blanditiis cumque, dicta distinctio doloribus, ex facilis illum mollitia pariatur quae,
+        quia vero voluptate. Aut, esse!
+    </p>
+</div>
+
+
+</body>
+</html>
