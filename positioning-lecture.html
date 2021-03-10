@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Positioning Lecture</title>
+    <style>
+        #container {
+            margin: 50px auto;
+            width: 500px;
+            border: 1px solid #000;
+            padding: 10px;
+        }
+        #container2 {
+            margin: 50px auto;
+            width: 500px;
+            height: 300px;
+            border: 1px solid #000;
+            padding: 10px;
+            position: relative;
+        }
+        #box1 {
+            background-color: #77AF00; /* greenish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            float: left;
+        }
+        #box2 {
+            background-color: #1969B2; /* blueish */
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            float: right;
+        }
+
+        p {
+            background-color: antiquewhite;
+            clear: right;
+        }
+
+        #box3 {
+            background-color: #1969B2; /* blueish */
+            height: 100px;
+            width: 100px;
+            margin: 10px;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            top: 50px;
+            left: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci alias aliquid consequatur, deleniti distinctio dolorem error est excepturi inventore ipsum, natus placeat possimus quo ratione reiciendis similique, suscipit totam? Exercitationem!
+        </p>
+    </div>
+
+<div id="container2">
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto distinctio dolore excepturi iure magnam maxime nam porro? Dolores eum ipsa iusto nulla officiis optio pariatur perspiciatis quasi, sit velit voluptatibus.
+    </p>
+
+    <div> <!-- box 3 will use container 2 to position itself -->
+        <div id="box3"></div>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam beatae commodi earum et facere iste nostrum suscipit temporibus vel voluptas? Animi cupiditate dolor dolores harum illum nesciunt non quam repellendus?
+    </p>
+</div>
+</body>
+</html>
