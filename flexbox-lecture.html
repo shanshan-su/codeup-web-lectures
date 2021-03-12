@@ -17,8 +17,8 @@
             border: 3px solid goldenrod;
             display: flex;
             /*flex-wrap: wrap;*/
-            height: 500px;
-            flex-direction: column;
+            height: 15em;
+            /*flex-direction: column;*/
             /*justify-content: center;*/
             /*align-content: center;*/
         }
@@ -27,22 +27,26 @@
             background: #BFD45D;
             border: 2px solid #F9EFD6;
             padding: 1em;
+            /*flex-grow: 1;*/
         }
 
         #item1 {
-            order: 1;
+            align-self: center;
+            flex-grow: 3;
         }
 
         #item2 {
-            order: 2;
+            align-self: flex-start;
+            /*flex-grow: 1;*/
         }
 
         #item3 {
-            order: -1;
+            align-self: flex-end;
+            /*flex-grow: 1;*/
         }
 
         #item4 {
-            order: -2;
+            align-self: self-end;
         }
     </style>
 </head>
@@ -61,7 +65,7 @@
 <!--        <div class="flex-item">Item 10</div>-->
 <!--        <div class="flex-item">Item 11</div>-->
 <!--        <div class="flex-item">Item 12</div>-->
-<!--    </div>-->
+    </div>
 
 
 
