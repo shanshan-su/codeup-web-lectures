@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox In Practice Lecture</title>
+    <link rel="stylesheet" href="css/flexbox-in-practice-lecture.css">
+    <style>
+        .flex-container {
+            display: flex;
+            width: 100%;
+            border: 3px solid goldenrod;
+            background-color: rebeccapurple;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-item {
+            background-color: #BFD45D;
+            border: 2px solid #F9EFD6;
+            padding: 1em;
+            margin: .5em;
+        }
+
+        #item1 {
+
+        }
+
+        #item2 {
+            margin-right: auto;
+        }
+
+        #item3 {
+
+        }
+
+        #item4 {
+            margin-left: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li id="home"><a href="#">Home</a></li>
+            <li id="news"><a href="#">News</a></li>
+            <li id="contact"><a href="#">Contact</a></li>
+            <li id="about"><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="flex-container">
+        <div id="item1" class="flex-item">Hamburger</div>
+        <div id="item2" class="flex-item">Logo</div>
+        <div id="item3" class="flex-item">Page Title</div>
+        <div id="item4" class="flex-item">Logout</div>
+    </div>
+</body>
+</html>
