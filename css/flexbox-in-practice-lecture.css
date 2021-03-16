@@ -7,6 +7,7 @@ body {
 }
 
 nav {
+    display: none;
     background: #333333;
 }
 
