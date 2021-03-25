@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM Lecture</title>
+</head>
+<body>
+    <h1>DOM Lecture</h1>
+
+<script>
+    'use strict';
+
+    // this code will produce a console log every second
+    // when count >= max, the interval is cancelled, and the logging will stop
+
+    // var count = 0;
+    // var max = 10;
+    // var interval = 1000; // interval time in milliseconds, which is 1 second
+    //
+    // var intervalId = setInterval(function () {
+    //     if (count >= max) {
+    //         clearInterval(intervalId);
+    //         console.log('All done');
+    //     } else {
+    //         console.log("Repeating this line; we're on interval number " + count);
+    //         count++;
+    //     }
+    // }, interval);   // return an ID for us to use later
+
+
+    var delay = 5000; // delay time in milliseconds
+
+    var timeoutId = setTimeout(function () {
+        window.location = "https://www.google.com"
+    }, delay);
+
+    // to cancel the timeout, you can call
+    // clearTimeout(timeoutId);
+    // prior to the delay expiring
+
+    var timeoutId2 = setTimeout(function () {
+        location.reload();
+    }, delay);
+
+    setTimeout(function() {
+        alert("Hey! I'm about to reload!")
+    }, 2000);
+
+</script>
+</body>
+</html>
