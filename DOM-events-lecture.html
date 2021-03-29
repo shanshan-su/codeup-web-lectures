@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Lecture Area</title>
+</head>
+<body>
+    <button id="button1">Let's see an event</button>
+    <button id="button2">Change some colors</button>
+    <button id="button3">Remove events [I hate 'em]</button>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquid animi aspernatur, culpa dolore earum eos hic incidunt minima molestiae nemo nisi nostrum porro quae recusandae reiciendis sapiente unde veritatis.</p>
+
+
+
+
+<script>
+    var buttonOne = document.getElementById("button1");
+
+    var alertMe = function() {
+        // What would you like me to do.. when I detect this incoming click?
+        alert("This button - is has been clicked!");
+    }
+
+    buttonOne.addEventListener("click", alertMe);
+
+    var buttonTwo = document.getElementById("button2");
+
+    var blueParagraph = function() {
+        var paragraph = document.getElementsByTagName("p");
+        paragraph[0].style.backgroundColor = "lightblue";
+    }
+
+    buttonTwo.addEventListener("click", blueParagraph);
+
+    var buttonThree = document.getElementById("button3");
+    buttonThree.addEventListener("click", function () {
+        buttonOne.removeEventListener("click", alertMe);
+        buttonTwo.removeEventListener("click", blueParagraph);
+    });
+
+
+</script>
+</body>
+</html>
