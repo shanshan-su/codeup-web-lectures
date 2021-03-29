@@ -13,6 +13,7 @@ console.log(flexboxElements);
 // TODO: Finish my FOR loop to go through that variable containing our d-flex'ed items and console.log each individual one within the loop!
 
 for (var i = 0; i < flexboxElements.length; i++){
+    console.log("What is i: " + i);
     console.log(flexboxElements[i]);
 }
 
