@@ -133,20 +133,78 @@ codeupDalmarker.setPopup(codeupDalPopup);
 // Geocoding Docs --> https://docs.mapbox.com/api/search/#geocoding
 // TODO TOGETHER: Let's set up our mapbox-geocoder-utils.js!
 
+// We set up: a mapbox-geocoder-utils.js, hooked it up tp our .html file, and console.logded to confirm hooking them up
 
 // TODO TOGETHER: Using the Geocoder helper function, log the coordinates of Codeup and recenter the map to focus on Codeup.
+
+// ex. function call: geocode("San Antonio", API_TOKEN_HERE).then(function(results) {
+// *      // do something with results
+// *  })
 //https://docs.mapbox.com/mapbox-gl-js/api/map/#map#setcenter
+
+geocode("701 Commerce St #100A, Dallas, TX 75202", mapboxToken).then(function(results) {
+    console.log(results);
+    marcoMap.setCenter(results);
+});
+
 
 //TODO: Using the geocode method above, add a marker at Codeup to the map
 
+// geocode("9030 Wurzbach Rd, San Antonio, TX 78240", mapboxToken).then(function(results) {
+//
+//     var popup = new mapboxgl.Popup()
+//         .setHTML("<h6>Thanks Geocode</h6>");
+//
+//     new mapboxgl.Marker()
+//         .setLngLat(results)
+//         .setPopup(popup)
+//         .addTo(marcoMap);
+// });
 
 //TODO: Instead of setCenter try using map.jumpTo()
+
+geocode("China", mapboxToken).then(function(results) {
+
+    var popup = new mapboxgl.Popup()
+        .setHTML("<h6>Thanks Geocode</h6>");
+
+    new mapboxgl.Marker()
+        .setLngLat(results)
+        .setPopup(popup)
+        .addTo(marcoMap);
+
+    marcoMap.jumpTo({center: results});
+});
+
 //TODO: Instead of setCenter try using map.flyTo()
 
+geocode("9030 Wurzbach Rd, San Antonio, TX 78240", mapboxToken).then(function(results) {
 
+    var popup = new mapboxgl.Popup()
+        .setHTML("<h6>Thanks Geocode</h6>");
+
+    new mapboxgl.Marker()
+        .setLngLat(results)
+        .setPopup(popup)
+        .addTo(marcoMap);
+
+    marcoMap.flyTo({center: results});
+});
 
 // TODO TOGETHER: Reverse Geocoding: Using the reverse geocoding method, enter the coordinates {lng: -98.4861, lat: 29.4260} to get a physical address for the Alamo
 
+// * EXAMPLE:
+//     *
+// *  reverseGeocode({lat: 32.77, lng: -96.79}, API_TOKEN_HERE).then(function(results) {
+// *      // do something with results
+// *  })
+
+reverseGeocode({lat: 29.4260, lng: -98.4861}, mapboxToken).then(function(results) {
+    console.log(results);
+});
+
 // TODO: Reverse geocode coordinates of your choice using the reverse geocode method
 
-
+reverseGeocode({lat: 32.7786, lng: -96.8056}, mapboxToken).then(function(results) {
+    console.log("Hey, where's codeup dallas at?" + " " + "I found it!! Here's the address: " , results);
+});
