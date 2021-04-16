@@ -182,6 +182,15 @@ const agesInTotal = familyMembers.reduce((total, member) => (total + member.age)
 
 console.log(agesInTotal);
 
+const agesOverTen = familyMembers.reduce((total, person) => {
+    if (person.age > 10) {
+        total.push(person);
+    }
+    return total;
+}, []);
+
+console.log(agesOverTen);
+
 </script>
 </body>
 </html>
