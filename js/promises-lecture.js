@@ -42,7 +42,7 @@ let chainingPokemonAPI = fetch('https://pokeapi.co/api/v2/pokemon')
 //  returned pokemon.
 // BONUS: Is there a way for us to clean up our code?
 
-let starWarsAPI = fetch("https://swapi.dev/api/films");
+const starWarsAPI = fetch("https://swapi.dev/api/films");
 
 // Let's try working with the Star Wars API!
 
@@ -54,4 +54,24 @@ console.log(`starWarsAPI Promise`, starWarsAPI);
 
 // TODO: chain another method that iterates through the results array and console logs the names
 
+let chainingStarWarsAPI = fetch("https://swapi.dev/api/films")
+    .then(response => {return response.json()})
+    .then(jsonData => {
+        console.log(jsonData);
+        return jsonData.results;
+    })
+    .then(results => {
+        results.forEach(film => console.log(`${film.title} ${film.episode_id}`))
+    });
+
 // TODO: Demonstrate Promise.all and Promise.race
+
+// Promise.all([starWarsAPI, pokemonAPI])
+//     .then(response => {
+//         console.log(response);
+//     });
+
+Promise.race([starWarsAPI, pokemonAPI])
+    .then(response => {
+        console.log(response);
+    });
