@@ -71,6 +71,18 @@ let chainingStarWarsAPI = fetch("https://swapi.dev/api/films")
 //         console.log(response);
 //     });
 
+Promise.all([pokemonAPI,starWarsAPI])
+    .then((responses) =>{
+        // responses contain the resolved promises  in the same order that they were passed into the all method
+        // you don't have to do this
+        // console.log(responses[0].json().then(parsedData => console.log(parsedData)));
+        return Promise.all(
+            responses.map(response => {
+                return response.json();
+            })
+        )
+    }).then((parsedResults) =>console.log(parsedResults));
+
 Promise.race([starWarsAPI, pokemonAPI])
     .then(response => {
         console.log(response);
